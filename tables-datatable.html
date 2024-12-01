@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>کنترل ناوگان خودرو و تخلیه نخاله</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta content="" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="">
+
+        <!-- DataTables -->
+        <link href="plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="dark-sidenav">
+        <!-- Left Sidenav -->
+        <div class="left-sidenav">
+            <!-- LOGO -->
+            <div class="brand">
+                <a href="crm-index.html" class="logo">
+                    <span>
+                        <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    </span>
+                    <span>
+                        <img src="" alt="logo-large" class="logo-lg logo-light">
+                        <img src="" alt="logo-large" class="logo-lg logo-dark">
+                    </span>
+                </a>
+            </div>
+            <!--end logo-->
+            <div class="menu-content h-100" data-simplebar>
+                <ul class="metismenu left-sidenav-menu">
+                    <li class="menu-label mt-0">اصلی</li>
+                    <li>
+                        <a href="javascript: void(0);"> <i data-feather="home" class="align-self-center menu-icon"></i><span>داشبرد</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="ti-control-record"></i>داشبورد اول</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sales-index.html"><i class="ti-control-record"></i>داشبورد دوم</a></li> 
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i data-feather="lock" class="align-self-center menu-icon"></i><span>احراز هویت</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="login.html"><i class="ti-control-record"></i>ورود</a></li>
+                            <li class="nav-item"><a class="nav-link" href="register.html"><i class="ti-control-record"></i>ثبت نام</a></li>
+                            <li class="nav-item"><a class="nav-link" href="forget-password.html"><i class="ti-control-record"></i>بازیابی رمزعبور</a></li>
+                            <li class="nav-item"><a class="nav-link" href="404.html"><i class="ti-control-record"></i>خطا 404</a></li>
+                            <li class="nav-item"><a class="nav-link" href="500.html"><i class="ti-control-record"></i>خطا 500</a></li>
+                        </ul>
+                    </li> 
+
+                    <hr class="hr-dashed hr-menu">
+                    <li class="menu-label my-2">کامپوننت‌ها و دیگر</li>
+
+                    <li>
+                        <a href="javascript: void(0);"><i data-feather="box" class="align-self-center menu-icon"></i><span>کیت رابط کاربری</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>جدول ها<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="tables-basic.html">پایه</a></li>
+                                    <li><a href="tables-datatable.html">جدول داده ای</a></li>
+                                    <li><a href="tables-editable.html">قابل ویرایش</a></li>
+                                    <li><a href="tables-responsive.html">پاسخگو</a></li>
+                                    
+                                </ul>
+                            </li>     
+                        </ul>                        
+                    </li>
+        
+                </ul>
+
+            </div>
+        </div>
+        <!-- end left-sidenav-->
+        
+
+        <div class="page-wrapper">
+            <!-- Top Bar Start -->
+            <div class="topbar">            
+                <!-- Navbar -->
+                <nav class="navbar-custom">    
+                    <ul class="list-unstyled topbar-nav float-right mb-0">  
+                        <li class="dropdown hide-phone">
+                            <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <i data-feather="search" class="topbar-icon"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu dropdown-menu-right dropdown-lg p-0">
+                                <!-- Top Search Bar -->
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ...">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>                      
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <i data-feather="bell" class="align-self-center topbar-icon"></i>
+                                <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+                            
+                                <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                                    اطلاعیه ها<span class="badge badge-primary badge-pill">2</span>
+                                </h6> 
+                                <div class="notification-menu" data-simplebar>
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">2 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <i data-feather="shopping-cart" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سفارش شما ثبت شد</h6>
+                                                <small class="text-muted mb-0">لورم ایپسوم متن ساختگی با تولید سادگی</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">10 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <img src="assets/images/users/user-4.jpg" alt="" class="thumb-sm rounded-circle">
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">ملاقات با طراحان</h6>
+                                                <small class="text-muted mb-0">نامفهوم از صنعت چاپ و با استفاده از طراحان</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">40 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">                                                    
+                                                <i data-feather="users" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سه تسک طراحی تجربه کاربری تمام شد</h6>
+                                                <small class="text-muted mb-0">چاپگرها و متون بلکه روزنامه و مجله در ستون</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">1 ساعت قبل </small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <img src="assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle">
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سفارش شما ثبت شد</h6>
+                                                <small class="text-muted mb-0">نامفهوم از صنعت چاپ و با استفاده از طراحان</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">2  ساعت قبل </small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <i data-feather="check-circle" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">پرداخت موفقیت آمیز</h6>
+                                                <small class="text-muted mb-0">چاپگرها و متون بلکه روزنامه و مجله در ستون</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                </div>
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                    مشاهده همه <i class="fi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <span class="ml-1 nav-user-name hidden-sm">نیک</span>
+                                <img src="assets/images/users/user-5.jpg" alt="profile-user" class="rounded-circle" />                                 
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user" class="align-self-center icon-xs icon-dual mr-1"></i>پروفایل</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings" class="align-self-center icon-xs icon-dual mr-1"></i>تنظیمات</a>
+                                <div class="dropdown-divider mb-0"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="power" class="align-self-center icon-xs icon-dual mr-1"></i>خروج</a>
+                            </div>
+                        </li>
+                    </ul><!--end topbar-nav-->
+        
+                    <ul class="list-unstyled topbar-nav mb-0">                        
+                        <li>
+                            <button class="nav-link button-menu-mobile">
+                                <i data-feather="menu" class="align-self-center topbar-icon"></i>
+                            </button>
+                        </li>                          
+                    </ul>
+                </nav>
+                <!-- end navbar-->
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Page Content-->
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داشبورد ناوگان خودرو</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">جدول ها</a></li>
+                                            <li class="breadcrumb-item active">جداول دیتاتیبل</li>
+                                        </ol>
+                                    </div><!--end col-->
+                                    <div class="col-auto align-self-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
+                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
+                                            <span class="" id="Select_date">11 مرداد</span>
+                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-outline-primary mx-2">
+                                            <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        </a>
+                                    </div><!--end col-->  
+                                </div><!--end row-->                                                              
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title"> جداول  دیتاتیبل</h4>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>نام</th>
+                                                <th>سمت</th>
+                                                <th>دفتر</th>
+                                                <th>سن</th>
+                                                <th>تاریخ شروع</th>
+                                                <th>حقوق</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>تینا محمدی</td>
+                                                <td>معمار سیستم</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1395/04/25</td>
+                                                <td>320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره وحیدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>63</td>
+                                                <td>1395/07/25</td>
+                                                <td>170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه نوری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>66</td>
+                                                <td>1396/01/12</td>
+                                                <td>86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کیمیا اعلا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1399/03/29</td>
+                                                <td>433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه محمدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>33</td>
+                                                <td>1394/11/28</td>
+                                                <td>162,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا جم</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1399/12/02</td>
+                                                <td>372,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون مهرآیین</td>
+                                                <td>مسئول فروش</td>
+                                                <td>گیلان</td>
+                                                <td>59</td>
+                                                <td>1399/08/06</td>
+                                                <td>137,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>رها داوودی</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>مشهد</td>
+                                                <td>55</td>
+                                                <td>1397/10/14</td>
+                                                <td>327,900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کارن نیروانا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>گیلان</td>
+                                                <td>39</td>
+                                                <td>1396/09/15</td>
+                                                <td>205,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سونیا صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>23</td>
+                                                <td>1394/12/13</td>
+                                                <td>103,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد صمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>30</td>
+                                                <td>1394/12/19</td>
+                                                <td>90,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کامران فروهر</td>
+                                                <td>مدیر تیم</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1392/03/03</td>
+                                                <td>342,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید سپهری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>36</td>
+                                                <td>1394/10/16</td>
+                                                <td>470,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هاله شیخ</td>
+                                                <td>مدیر تولید محتوا</td>
+                                                <td>رشت</td>
+                                                <td>43</td>
+                                                <td>1399/12/18</td>
+                                                <td>313,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تانیا جم</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>19</td>
+                                                <td>1397/03/17</td>
+                                                <td>385,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مهران سپهری</td>
+                                                <td>طراح </td>
+                                                <td>رشت</td>
+                                                <td>66</td>
+                                                <td>1399/11/27</td>
+                                                <td>198,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پندار نیک</td>
+                                                <td>مدیر اجرایی)</td>
+                                                <td>تهران</td>
+                                                <td>64</td>
+                                                <td>1397/06/09</td>
+                                                <td>725,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلنوش مالکی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>تهران</td>
+                                                <td>59</td>
+                                                <td>1396/04/10</td>
+                                                <td>237,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام محمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>41</td>
+                                                <td>1399/10/13</td>
+                                                <td>132,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>داوود امیری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>تهران</td>
+                                                <td>35</td>
+                                                <td>1399/09/26</td>
+                                                <td>217,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صبا احمدی</td>
+                                                <td>مدیر تولید</td>
+                                                <td>تهران</td>
+                                                <td>30</td>
+                                                <td>1395/09/03</td>
+                                                <td>345,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یگانه سیما</td>
+                                                <td>مدیر محصول</td>
+                                                <td>تهران</td>
+                                                <td>40</td>
+                                                <td>1396/06/25</td>
+                                                <td>675,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما سالاری</td>
+                                                <td>مدیر فروش</td>
+                                                <td>تهران</td>
+                                                <td>21</td>
+                                                <td>1395/12/12</td>
+                                                <td>106,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دارا جم</td>
+                                                <td>مسئول فروش</td>
+                                                <td>کرمان</td>
+                                                <td>23</td>
+                                                <td>1397/09/20</td>
+                                                <td>85,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>آناهیتا رومی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1396/10/09</td>
+                                                <td>1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره احمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>42</td>
+                                                <td>1397/12/22</td>
+                                                <td>92,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مینا کریمی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تبریز</td>
+                                                <td>28</td>
+                                                <td>1397/11/14</td>
+                                                <td>357,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>28</td>
+                                                <td>1395/06/07</td>
+                                                <td>206,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید احمدی</td>
+                                                <td>مدیریت شرکت)</td>
+                                                <td>گیلان</td>
+                                                <td>48</td>
+                                                <td>1397/03/11</td>
+                                                <td>850,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>شیما کریمی</td>
+                                                <td>بازاریابی</td>
+                                                <td>مشهد</td>
+                                                <td>20</td>
+                                                <td>1395/08/14</td>
+                                                <td>163,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>میلاد نور</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>کرمان</td>
+                                                <td>37</td>
+                                                <td>1395/06/02</td>
+                                                <td>95,400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>رشت</td>
+                                                <td>53</td>
+                                                <td>1396/10/22</td>
+                                                <td>114,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پدرام محمدی</td>
+                                                <td>نویسنده</td>
+                                                <td>رشت</td>
+                                                <td>27</td>
+                                                <td>1395/05/07</td>
+                                                <td>145,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره کریمی</td>
+                                                <td>مدیر تیم</td>
+                                                <td>گیلان</td>
+                                                <td>22</td>
+                                                <td>1394/10/26</td>
+                                                <td>235,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مانا کریمی</td>
+                                                <td>پشتیبانی سایت</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/03/09</td>
+                                                <td>324,050</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یارا شهیدی</td>
+                                                <td>طراح </td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/12/09</td>
+                                                <td>85,675</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما احمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>گیلان</td>
+                                                <td>51</td>
+                                                <td>1394/12/16</td>
+                                                <td>164,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>منشی</td>
+                                                <td>گیلان</td>
+                                                <td>41</td>
+                                                <td>1397/02/12</td>
+                                                <td>109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ویدا احدی</td>
+                                                <td>مدیر مالی</td>
+                                                <td>گیلان</td>
+                                                <td>62</td>
+                                                <td>1396/02/14</td>
+                                                <td>452,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تینا منصوری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>37</td>
+                                                <td>1394/12/11</td>
+                                                <td>136,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد خواجوی</td>
+                                                <td>مدیر</td>
+                                                <td>تهران</td>
+                                                <td>65</td>
+                                                <td>1394/09/26</td>
+                                                <td>645,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>الهه جم</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1395/02/03</td>
+                                                <td>234,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا احدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>38</td>
+                                                <td>1395/05/03</td>
+                                                <td>163,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>مشهد</td>
+                                                <td>37</td>
+                                                <td>1396/08/19</td>
+                                                <td>139,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مایا امیری</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1392/08/11</td>
+                                                <td>98,540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فریده کالو</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/07/07</td>
+                                                <td>87,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس داده</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1399/04/09</td>
+                                                <td>138,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرهبد زیلاند</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>63</td>
+                                                <td>1397/01/04</td>
+                                                <td>125,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا صنم</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>56</td>
+                                                <td>1399/06/01</td>
+                                                <td>115,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا محمدی</td>
+                                                <td> برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>43</td>
+                                                <td>1392/02/01</td>
+                                                <td>75,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سارا فروهر</td>
+                                                <td>مسئول فروش</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/12/06</td>
+                                                <td>145,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1395/03/21</td>
+                                                <td>356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>لاله محمدی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>رشت</td>
+                                                <td>21</td>
+                                                <td>1396/02/27</td>
+                                                <td>103,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هدا محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>گیلان</td>
+                                                <td>30</td>
+                                                <td>1397/07/14</td>
+                                                <td>86,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td> شادی محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تهران</td>
+                                                <td>51</td>
+                                                <td>1394/11/13</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>  یگانه محمدی</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تبریز</td>
+                                                <td>29</td>
+                                                <td>1395/06/27</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دنیا محمدی</td>
+                                                <td>پشتیبانی مشتری</td>
+                                                <td>تهران</td>
+                                                <td>27</td>
+                                                <td>1395/01/25</td>
+                                                <td>112,000</td>
+                                            </tr>
+                                            </tbody>
+                                    </table>
+    
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">مثال پایین مرز</h4>
+                                </div><!--end card-header-->
+                                <div class="card-body table-responsive">
+                                    <div class="">
+                                        <table id="datatable2" class="table dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead>
+                                                <tr>
+                                                    <th>نام</th>
+                                                    <th>سمت</th>
+                                                    <th>دفتر</th>
+                                                    <th>سن</th>
+                                                    <th>تاریخ شروع</th>
+                                                    <th>حقوق</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>تینا محمدی</td>
+                                                    <td>معمار سیستم</td>
+                                                    <td>تهران</td>
+                                                    <td>61</td>
+                                                    <td>1395/04/25</td>
+                                                    <td>320,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>گلاره وحیدی</td>
+                                                    <td>حسابدار</td>
+                                                    <td>مشهد</td>
+                                                    <td>63</td>
+                                                    <td>1395/07/25</td>
+                                                    <td>170,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>عاطفه نوری</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>گیلان</td>
+                                                    <td>66</td>
+                                                    <td>1396/01/12</td>
+                                                    <td>86,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>کیمیا اعلا</td>
+                                                    <td>برنامه نویس</td>
+                                                    <td>تهران</td>
+                                                    <td>22</td>
+                                                    <td>1399/03/29</td>
+                                                    <td>433,060</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>عاطفه محمدی</td>
+                                                    <td>حسابدار</td>
+                                                    <td>مشهد</td>
+                                                    <td>33</td>
+                                                    <td>1394/11/28</td>
+                                                    <td>162,700</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>بیتا جم</td>
+                                                    <td>مدیریت بودجه</td>
+                                                    <td>تهران</td>
+                                                    <td>61</td>
+                                                    <td>1399/12/02</td>
+                                                    <td>372,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>همایون مهرآیین</td>
+                                                    <td>مسئول فروش</td>
+                                                    <td>گیلان</td>
+                                                    <td>59</td>
+                                                    <td>1399/08/06</td>
+                                                    <td>137,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>رها داوودی</td>
+                                                    <td>مدیریت بودجه</td>
+                                                    <td>مشهد</td>
+                                                    <td>55</td>
+                                                    <td>1397/10/14</td>
+                                                    <td>327,900</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>کارن نیروانا</td>
+                                                    <td>برنامه نویس</td>
+                                                    <td>گیلان</td>
+                                                    <td>39</td>
+                                                    <td>1396/09/15</td>
+                                                    <td>205,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سونیا صمدی</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>تهران</td>
+                                                    <td>23</td>
+                                                    <td>1394/12/13</td>
+                                                    <td>103,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جواد صمدی</td>
+                                                    <td>مدیر دفتر</td>
+                                                    <td>رشت</td>
+                                                    <td>30</td>
+                                                    <td>1394/12/19</td>
+                                                    <td>90,560</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>کامران فروهر</td>
+                                                    <td>مدیر تیم</td>
+                                                    <td>تهران</td>
+                                                    <td>22</td>
+                                                    <td>1392/03/03</td>
+                                                    <td>342,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>فرید سپهری</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>گیلان</td>
+                                                    <td>36</td>
+                                                    <td>1394/10/16</td>
+                                                    <td>470,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>هاله شیخ</td>
+                                                    <td>مدیر تولید محتوا</td>
+                                                    <td>رشت</td>
+                                                    <td>43</td>
+                                                    <td>1399/12/18</td>
+                                                    <td>313,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>تانیا جم</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>رشت</td>
+                                                    <td>19</td>
+                                                    <td>1397/03/17</td>
+                                                    <td>385,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مهران سپهری</td>
+                                                    <td>طراح </td>
+                                                    <td>رشت</td>
+                                                    <td>66</td>
+                                                    <td>1399/11/27</td>
+                                                    <td>198,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>پندار نیک</td>
+                                                    <td>مدیر اجرایی)</td>
+                                                    <td>تهران</td>
+                                                    <td>64</td>
+                                                    <td>1397/06/09</td>
+                                                    <td>725,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>گلنوش مالکی</td>
+                                                    <td>مدیر سیستم</td>
+                                                    <td>تهران</td>
+                                                    <td>59</td>
+                                                    <td>1396/04/10</td>
+                                                    <td>237,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>بهنام محمدی</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>رشت</td>
+                                                    <td>41</td>
+                                                    <td>1399/10/13</td>
+                                                    <td>132,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>داوود امیری</td>
+                                                    <td>مدیر دفتر</td>
+                                                    <td>تهران</td>
+                                                    <td>35</td>
+                                                    <td>1399/09/26</td>
+                                                    <td>217,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>صبا احمدی</td>
+                                                    <td>مدیر تولید</td>
+                                                    <td>تهران</td>
+                                                    <td>30</td>
+                                                    <td>1395/09/03</td>
+                                                    <td>345,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>یگانه سیما</td>
+                                                    <td>مدیر محصول</td>
+                                                    <td>تهران</td>
+                                                    <td>40</td>
+                                                    <td>1396/06/25</td>
+                                                    <td>675,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سیما سالاری</td>
+                                                    <td>مدیر فروش</td>
+                                                    <td>تهران</td>
+                                                    <td>21</td>
+                                                    <td>1395/12/12</td>
+                                                    <td>106,450</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>دارا جم</td>
+                                                    <td>مسئول فروش</td>
+                                                    <td>کرمان</td>
+                                                    <td>23</td>
+                                                    <td>1397/09/20</td>
+                                                    <td>85,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>آناهیتا رومی</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>رشت</td>
+                                                    <td>47</td>
+                                                    <td>1396/10/09</td>
+                                                    <td>1,200,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>گلاره احمدی</td>
+                                                    <td>توسعه دهنده</td>
+                                                    <td>تهران</td>
+                                                    <td>42</td>
+                                                    <td>1397/12/22</td>
+                                                    <td>92,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مینا کریمی</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>تبریز</td>
+                                                    <td>28</td>
+                                                    <td>1397/11/14</td>
+                                                    <td>357,650</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>بهنام صمدی</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>گیلان</td>
+                                                    <td>28</td>
+                                                    <td>1395/06/07</td>
+                                                    <td>206,850</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>فرید احمدی</td>
+                                                    <td>مدیریت شرکت)</td>
+                                                    <td>گیلان</td>
+                                                    <td>48</td>
+                                                    <td>1397/03/11</td>
+                                                    <td>850,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>شیما کریمی</td>
+                                                    <td>بازاریابی</td>
+                                                    <td>مشهد</td>
+                                                    <td>20</td>
+                                                    <td>1395/08/14</td>
+                                                    <td>163,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>میلاد نور</td>
+                                                    <td>مدیریت بودجه</td>
+                                                    <td>کرمان</td>
+                                                    <td>37</td>
+                                                    <td>1395/06/02</td>
+                                                    <td>95,400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سیما محمدی</td>
+                                                    <td>توسعه دهنده</td>
+                                                    <td>رشت</td>
+                                                    <td>53</td>
+                                                    <td>1396/10/22</td>
+                                                    <td>114,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>پدرام محمدی</td>
+                                                    <td>نویسنده</td>
+                                                    <td>رشت</td>
+                                                    <td>27</td>
+                                                    <td>1395/05/07</td>
+                                                    <td>145,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>گلاره کریمی</td>
+                                                    <td>مدیر تیم</td>
+                                                    <td>گیلان</td>
+                                                    <td>22</td>
+                                                    <td>1394/10/26</td>
+                                                    <td>235,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مانا کریمی</td>
+                                                    <td>پشتیبانی سایت</td>
+                                                    <td>تهران</td>
+                                                    <td>46</td>
+                                                    <td>1395/03/09</td>
+                                                    <td>324,050</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>یارا شهیدی</td>
+                                                    <td>طراح </td>
+                                                    <td>گیلان</td>
+                                                    <td>47</td>
+                                                    <td>1396/12/09</td>
+                                                    <td>85,675</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سیما احمدی</td>
+                                                    <td>مدیر دفتر</td>
+                                                    <td>گیلان</td>
+                                                    <td>51</td>
+                                                    <td>1394/12/16</td>
+                                                    <td>164,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سیما محمدی</td>
+                                                    <td>منشی</td>
+                                                    <td>گیلان</td>
+                                                    <td>41</td>
+                                                    <td>1397/02/12</td>
+                                                    <td>109,850</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ویدا احدی</td>
+                                                    <td>مدیر مالی</td>
+                                                    <td>گیلان</td>
+                                                    <td>62</td>
+                                                    <td>1396/02/14</td>
+                                                    <td>452,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>تینا منصوری</td>
+                                                    <td>مدیر دفتر</td>
+                                                    <td>رشت</td>
+                                                    <td>37</td>
+                                                    <td>1394/12/11</td>
+                                                    <td>136,200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>جواد خواجوی</td>
+                                                    <td>مدیر</td>
+                                                    <td>تهران</td>
+                                                    <td>65</td>
+                                                    <td>1394/09/26</td>
+                                                    <td>645,750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>الهه جم</td>
+                                                    <td>مهندس ارشد</td>
+                                                    <td>تبریز</td>
+                                                    <td>64</td>
+                                                    <td>1395/02/03</td>
+                                                    <td>234,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>بیتا احدی</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>رشت</td>
+                                                    <td>38</td>
+                                                    <td>1395/05/03</td>
+                                                    <td>163,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>صنم امیری</td>
+                                                    <td>مهندس ارشد</td>
+                                                    <td>مشهد</td>
+                                                    <td>37</td>
+                                                    <td>1396/08/19</td>
+                                                    <td>139,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>مایا امیری</td>
+                                                    <td>توسعه دهنده</td>
+                                                    <td>تهران</td>
+                                                    <td>61</td>
+                                                    <td>1392/08/11</td>
+                                                    <td>98,540</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>فریده کالو</td>
+                                                    <td>مهندس ارشد</td>
+                                                    <td>گیلان</td>
+                                                    <td>47</td>
+                                                    <td>1396/07/07</td>
+                                                    <td>87,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>صنم امیری</td>
+                                                    <td>مهندس داده</td>
+                                                    <td>تبریز</td>
+                                                    <td>64</td>
+                                                    <td>1399/04/09</td>
+                                                    <td>138,575</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>فرهبد زیلاند</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>تهران</td>
+                                                    <td>63</td>
+                                                    <td>1397/01/04</td>
+                                                    <td>125,250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ژیلا صنم</td>
+                                                    <td>مهندس نرم افزار</td>
+                                                    <td>گیلان</td>
+                                                    <td>56</td>
+                                                    <td>1399/06/01</td>
+                                                    <td>115,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ژیلا محمدی</td>
+                                                    <td> برنامه نویس</td>
+                                                    <td>تهران</td>
+                                                    <td>43</td>
+                                                    <td>1392/02/01</td>
+                                                    <td>75,650</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سارا فروهر</td>
+                                                    <td>مسئول فروش</td>
+                                                    <td>تهران</td>
+                                                    <td>46</td>
+                                                    <td>1395/12/06</td>
+                                                    <td>145,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>همایون محمدی</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>رشت</td>
+                                                    <td>47</td>
+                                                    <td>1395/03/21</td>
+                                                    <td>356,250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>لاله محمدی</td>
+                                                    <td>مدیر سیستم</td>
+                                                    <td>رشت</td>
+                                                    <td>21</td>
+                                                    <td>1396/02/27</td>
+                                                    <td>103,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>هدا محمدی</td>
+                                                    <td>توسعه دهنده</td>
+                                                    <td>گیلان</td>
+                                                    <td>30</td>
+                                                    <td>1397/07/14</td>
+                                                    <td>86,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td> شادی محمدی</td>
+                                                    <td>مدیر اجرایی</td>
+                                                    <td>تهران</td>
+                                                    <td>51</td>
+                                                    <td>1394/11/13</td>
+                                                    <td>183,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>  یگانه محمدی</td>
+                                                    <td>برنامه نویس</td>
+                                                    <td>تبریز</td>
+                                                    <td>29</td>
+                                                    <td>1395/06/27</td>
+                                                    <td>183,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>دنیا محمدی</td>
+                                                    <td>پشتیبانی مشتری</td>
+                                                    <td>تهران</td>
+                                                    <td>27</td>
+                                                    <td>1395/01/25</td>
+                                                    <td>112,000</td>
+                                                </tr>
+                                                </tbody>
+                                        </table>
+                                    </div>           
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end row-->
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">نمونه دکمه ها</h4>
+                                    <p class="text-muted mb-0">افزونه دکمه  برای دیتاتیبل مجموعه‌ای از گزینه‌ها، روش‌های ای پی آی و استایل‌ها را برای نمایش دکمه‌ها در صفحه‌ای که با دیتاتیبل تعامل دارند، ارائه می‌کند. کتابخانه هسته چارچوبی را فراهم می کند که پلاگین ها می توانند بر اساس آن ساخته شوند.
+                                    </p>
+                                </div><!--end card-header-->
+                                <div class="card-body">  
+                                    <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>نام</th>
+                                                <th>سمت</th>
+                                                <th>دفتر</th>
+                                                <th>سن</th>
+                                                <th>تاریخ شروع</th>
+                                                <th>حقوق</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>تینا محمدی</td>
+                                                <td>معمار سیستم</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1395/04/25</td>
+                                                <td>320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره وحیدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>63</td>
+                                                <td>1395/07/25</td>
+                                                <td>170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه نوری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>66</td>
+                                                <td>1396/01/12</td>
+                                                <td>86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کیمیا اعلا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1399/03/29</td>
+                                                <td>433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه محمدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>33</td>
+                                                <td>1394/11/28</td>
+                                                <td>162,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا جم</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1399/12/02</td>
+                                                <td>372,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون مهرآیین</td>
+                                                <td>مسئول فروش</td>
+                                                <td>گیلان</td>
+                                                <td>59</td>
+                                                <td>1399/08/06</td>
+                                                <td>137,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>رها داوودی</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>مشهد</td>
+                                                <td>55</td>
+                                                <td>1397/10/14</td>
+                                                <td>327,900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کارن نیروانا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>گیلان</td>
+                                                <td>39</td>
+                                                <td>1396/09/15</td>
+                                                <td>205,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سونیا صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>23</td>
+                                                <td>1394/12/13</td>
+                                                <td>103,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد صمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>30</td>
+                                                <td>1394/12/19</td>
+                                                <td>90,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کامران فروهر</td>
+                                                <td>مدیر تیم</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1392/03/03</td>
+                                                <td>342,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید سپهری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>36</td>
+                                                <td>1394/10/16</td>
+                                                <td>470,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هاله شیخ</td>
+                                                <td>مدیر تولید محتوا</td>
+                                                <td>رشت</td>
+                                                <td>43</td>
+                                                <td>1399/12/18</td>
+                                                <td>313,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تانیا جم</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>19</td>
+                                                <td>1397/03/17</td>
+                                                <td>385,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مهران سپهری</td>
+                                                <td>طراح </td>
+                                                <td>رشت</td>
+                                                <td>66</td>
+                                                <td>1399/11/27</td>
+                                                <td>198,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پندار نیک</td>
+                                                <td>مدیر اجرایی)</td>
+                                                <td>تهران</td>
+                                                <td>64</td>
+                                                <td>1397/06/09</td>
+                                                <td>725,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلنوش مالکی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>تهران</td>
+                                                <td>59</td>
+                                                <td>1396/04/10</td>
+                                                <td>237,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام محمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>41</td>
+                                                <td>1399/10/13</td>
+                                                <td>132,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>داوود امیری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>تهران</td>
+                                                <td>35</td>
+                                                <td>1399/09/26</td>
+                                                <td>217,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صبا احمدی</td>
+                                                <td>مدیر تولید</td>
+                                                <td>تهران</td>
+                                                <td>30</td>
+                                                <td>1395/09/03</td>
+                                                <td>345,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یگانه سیما</td>
+                                                <td>مدیر محصول</td>
+                                                <td>تهران</td>
+                                                <td>40</td>
+                                                <td>1396/06/25</td>
+                                                <td>675,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما سالاری</td>
+                                                <td>مدیر فروش</td>
+                                                <td>تهران</td>
+                                                <td>21</td>
+                                                <td>1395/12/12</td>
+                                                <td>106,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دارا جم</td>
+                                                <td>مسئول فروش</td>
+                                                <td>کرمان</td>
+                                                <td>23</td>
+                                                <td>1397/09/20</td>
+                                                <td>85,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>آناهیتا رومی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1396/10/09</td>
+                                                <td>1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره احمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>42</td>
+                                                <td>1397/12/22</td>
+                                                <td>92,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مینا کریمی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تبریز</td>
+                                                <td>28</td>
+                                                <td>1397/11/14</td>
+                                                <td>357,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>28</td>
+                                                <td>1395/06/07</td>
+                                                <td>206,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید احمدی</td>
+                                                <td>مدیریت شرکت)</td>
+                                                <td>گیلان</td>
+                                                <td>48</td>
+                                                <td>1397/03/11</td>
+                                                <td>850,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>شیما کریمی</td>
+                                                <td>بازاریابی</td>
+                                                <td>مشهد</td>
+                                                <td>20</td>
+                                                <td>1395/08/14</td>
+                                                <td>163,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>میلاد نور</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>کرمان</td>
+                                                <td>37</td>
+                                                <td>1395/06/02</td>
+                                                <td>95,400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>رشت</td>
+                                                <td>53</td>
+                                                <td>1396/10/22</td>
+                                                <td>114,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پدرام محمدی</td>
+                                                <td>نویسنده</td>
+                                                <td>رشت</td>
+                                                <td>27</td>
+                                                <td>1395/05/07</td>
+                                                <td>145,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره کریمی</td>
+                                                <td>مدیر تیم</td>
+                                                <td>گیلان</td>
+                                                <td>22</td>
+                                                <td>1394/10/26</td>
+                                                <td>235,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مانا کریمی</td>
+                                                <td>پشتیبانی سایت</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/03/09</td>
+                                                <td>324,050</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یارا شهیدی</td>
+                                                <td>طراح </td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/12/09</td>
+                                                <td>85,675</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما احمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>گیلان</td>
+                                                <td>51</td>
+                                                <td>1394/12/16</td>
+                                                <td>164,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>منشی</td>
+                                                <td>گیلان</td>
+                                                <td>41</td>
+                                                <td>1397/02/12</td>
+                                                <td>109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ویدا احدی</td>
+                                                <td>مدیر مالی</td>
+                                                <td>گیلان</td>
+                                                <td>62</td>
+                                                <td>1396/02/14</td>
+                                                <td>452,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تینا منصوری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>37</td>
+                                                <td>1394/12/11</td>
+                                                <td>136,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد خواجوی</td>
+                                                <td>مدیر</td>
+                                                <td>تهران</td>
+                                                <td>65</td>
+                                                <td>1394/09/26</td>
+                                                <td>645,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>الهه جم</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1395/02/03</td>
+                                                <td>234,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا احدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>38</td>
+                                                <td>1395/05/03</td>
+                                                <td>163,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>مشهد</td>
+                                                <td>37</td>
+                                                <td>1396/08/19</td>
+                                                <td>139,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مایا امیری</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1392/08/11</td>
+                                                <td>98,540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فریده کالو</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/07/07</td>
+                                                <td>87,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس داده</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1399/04/09</td>
+                                                <td>138,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرهبد زیلاند</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>63</td>
+                                                <td>1397/01/04</td>
+                                                <td>125,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا صنم</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>56</td>
+                                                <td>1399/06/01</td>
+                                                <td>115,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا محمدی</td>
+                                                <td> برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>43</td>
+                                                <td>1392/02/01</td>
+                                                <td>75,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سارا فروهر</td>
+                                                <td>مسئول فروش</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/12/06</td>
+                                                <td>145,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1395/03/21</td>
+                                                <td>356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>لاله محمدی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>رشت</td>
+                                                <td>21</td>
+                                                <td>1396/02/27</td>
+                                                <td>103,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هدا محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>گیلان</td>
+                                                <td>30</td>
+                                                <td>1397/07/14</td>
+                                                <td>86,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td> شادی محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تهران</td>
+                                                <td>51</td>
+                                                <td>1394/11/13</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>  یگانه محمدی</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تبریز</td>
+                                                <td>29</td>
+                                                <td>1395/06/27</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دنیا محمدی</td>
+                                                <td>پشتیبانی مشتری</td>
+                                                <td>تهران</td>
+                                                <td>27</td>
+                                                <td>1395/01/25</td>
+                                                <td>112,000</td>
+                                            </tr>
+                                            </tbody>
+                                    </table>        
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">ردیف ایجاد شده به عنوان مثال پاسخ به تماس</h4>
+                                    <p class="text-muted mb-0">پسوند دکمه های دیتاتیبل
+                                        یک مجموعه مشترک از گزینه ها ، روش های ای ی آی و یک ظاهر طراحی شده برای نمایش ارائه می دهد
+                                        دکمه های روی صفحه ای که با یک دیتاتیبل در تعامل خواهند بود.کتابخانه اصلی
+                                        چارچوب مستقر را که بر روی آن افزونه ها ساخته شده است ، فراهم می کند.
+                                    </p>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <table id="row_callback" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>نام</th>
+                                                <th>سمت</th>
+                                                <th>دفتر</th>
+                                                <th>سن</th>
+                                                <th>تاریخ شروع</th>
+                                                <th>حقوق</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>تینا محمدی</td>
+                                                <td>معمار سیستم</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1395/04/25</td>
+                                                <td>320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره وحیدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>63</td>
+                                                <td>1395/07/25</td>
+                                                <td>170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه نوری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>66</td>
+                                                <td>1396/01/12</td>
+                                                <td>86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کیمیا اعلا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1399/03/29</td>
+                                                <td>433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>عاطفه محمدی</td>
+                                                <td>حسابدار</td>
+                                                <td>مشهد</td>
+                                                <td>33</td>
+                                                <td>1394/11/28</td>
+                                                <td>162,700</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا جم</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1399/12/02</td>
+                                                <td>372,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون مهرآیین</td>
+                                                <td>مسئول فروش</td>
+                                                <td>گیلان</td>
+                                                <td>59</td>
+                                                <td>1399/08/06</td>
+                                                <td>137,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>رها داوودی</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>مشهد</td>
+                                                <td>55</td>
+                                                <td>1397/10/14</td>
+                                                <td>327,900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کارن نیروانا</td>
+                                                <td>برنامه نویس</td>
+                                                <td>گیلان</td>
+                                                <td>39</td>
+                                                <td>1396/09/15</td>
+                                                <td>205,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سونیا صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>23</td>
+                                                <td>1394/12/13</td>
+                                                <td>103,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد صمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>30</td>
+                                                <td>1394/12/19</td>
+                                                <td>90,560</td>
+                                            </tr>
+                                            <tr>
+                                                <td>کامران فروهر</td>
+                                                <td>مدیر تیم</td>
+                                                <td>تهران</td>
+                                                <td>22</td>
+                                                <td>1392/03/03</td>
+                                                <td>342,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید سپهری</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>گیلان</td>
+                                                <td>36</td>
+                                                <td>1394/10/16</td>
+                                                <td>470,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هاله شیخ</td>
+                                                <td>مدیر تولید محتوا</td>
+                                                <td>رشت</td>
+                                                <td>43</td>
+                                                <td>1399/12/18</td>
+                                                <td>313,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تانیا جم</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>19</td>
+                                                <td>1397/03/17</td>
+                                                <td>385,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مهران سپهری</td>
+                                                <td>طراح </td>
+                                                <td>رشت</td>
+                                                <td>66</td>
+                                                <td>1399/11/27</td>
+                                                <td>198,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پندار نیک</td>
+                                                <td>مدیر اجرایی)</td>
+                                                <td>تهران</td>
+                                                <td>64</td>
+                                                <td>1397/06/09</td>
+                                                <td>725,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلنوش مالکی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>تهران</td>
+                                                <td>59</td>
+                                                <td>1396/04/10</td>
+                                                <td>237,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام محمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>41</td>
+                                                <td>1399/10/13</td>
+                                                <td>132,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>داوود امیری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>تهران</td>
+                                                <td>35</td>
+                                                <td>1399/09/26</td>
+                                                <td>217,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صبا احمدی</td>
+                                                <td>مدیر تولید</td>
+                                                <td>تهران</td>
+                                                <td>30</td>
+                                                <td>1395/09/03</td>
+                                                <td>345,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یگانه سیما</td>
+                                                <td>مدیر محصول</td>
+                                                <td>تهران</td>
+                                                <td>40</td>
+                                                <td>1396/06/25</td>
+                                                <td>675,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما سالاری</td>
+                                                <td>مدیر فروش</td>
+                                                <td>تهران</td>
+                                                <td>21</td>
+                                                <td>1395/12/12</td>
+                                                <td>106,450</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دارا جم</td>
+                                                <td>مسئول فروش</td>
+                                                <td>کرمان</td>
+                                                <td>23</td>
+                                                <td>1397/09/20</td>
+                                                <td>85,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>آناهیتا رومی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1396/10/09</td>
+                                                <td>1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره احمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>42</td>
+                                                <td>1397/12/22</td>
+                                                <td>92,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مینا کریمی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تبریز</td>
+                                                <td>28</td>
+                                                <td>1397/11/14</td>
+                                                <td>357,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بهنام صمدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>28</td>
+                                                <td>1395/06/07</td>
+                                                <td>206,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرید احمدی</td>
+                                                <td>مدیریت شرکت)</td>
+                                                <td>گیلان</td>
+                                                <td>48</td>
+                                                <td>1397/03/11</td>
+                                                <td>850,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>شیما کریمی</td>
+                                                <td>بازاریابی</td>
+                                                <td>مشهد</td>
+                                                <td>20</td>
+                                                <td>1395/08/14</td>
+                                                <td>163,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>میلاد نور</td>
+                                                <td>مدیریت بودجه</td>
+                                                <td>کرمان</td>
+                                                <td>37</td>
+                                                <td>1395/06/02</td>
+                                                <td>95,400</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>رشت</td>
+                                                <td>53</td>
+                                                <td>1396/10/22</td>
+                                                <td>114,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>پدرام محمدی</td>
+                                                <td>نویسنده</td>
+                                                <td>رشت</td>
+                                                <td>27</td>
+                                                <td>1395/05/07</td>
+                                                <td>145,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>گلاره کریمی</td>
+                                                <td>مدیر تیم</td>
+                                                <td>گیلان</td>
+                                                <td>22</td>
+                                                <td>1394/10/26</td>
+                                                <td>235,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مانا کریمی</td>
+                                                <td>پشتیبانی سایت</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/03/09</td>
+                                                <td>324,050</td>
+                                            </tr>
+                                            <tr>
+                                                <td>یارا شهیدی</td>
+                                                <td>طراح </td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/12/09</td>
+                                                <td>85,675</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما احمدی</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>گیلان</td>
+                                                <td>51</td>
+                                                <td>1394/12/16</td>
+                                                <td>164,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سیما محمدی</td>
+                                                <td>منشی</td>
+                                                <td>گیلان</td>
+                                                <td>41</td>
+                                                <td>1397/02/12</td>
+                                                <td>109,850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ویدا احدی</td>
+                                                <td>مدیر مالی</td>
+                                                <td>گیلان</td>
+                                                <td>62</td>
+                                                <td>1396/02/14</td>
+                                                <td>452,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تینا منصوری</td>
+                                                <td>مدیر دفتر</td>
+                                                <td>رشت</td>
+                                                <td>37</td>
+                                                <td>1394/12/11</td>
+                                                <td>136,200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>جواد خواجوی</td>
+                                                <td>مدیر</td>
+                                                <td>تهران</td>
+                                                <td>65</td>
+                                                <td>1394/09/26</td>
+                                                <td>645,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>الهه جم</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1395/02/03</td>
+                                                <td>234,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>بیتا احدی</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>رشت</td>
+                                                <td>38</td>
+                                                <td>1395/05/03</td>
+                                                <td>163,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>مشهد</td>
+                                                <td>37</td>
+                                                <td>1396/08/19</td>
+                                                <td>139,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مایا امیری</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>تهران</td>
+                                                <td>61</td>
+                                                <td>1392/08/11</td>
+                                                <td>98,540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فریده کالو</td>
+                                                <td>مهندس ارشد</td>
+                                                <td>گیلان</td>
+                                                <td>47</td>
+                                                <td>1396/07/07</td>
+                                                <td>87,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>صنم امیری</td>
+                                                <td>مهندس داده</td>
+                                                <td>تبریز</td>
+                                                <td>64</td>
+                                                <td>1399/04/09</td>
+                                                <td>138,575</td>
+                                            </tr>
+                                            <tr>
+                                                <td>فرهبد زیلاند</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>تهران</td>
+                                                <td>63</td>
+                                                <td>1397/01/04</td>
+                                                <td>125,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا صنم</td>
+                                                <td>مهندس نرم افزار</td>
+                                                <td>گیلان</td>
+                                                <td>56</td>
+                                                <td>1399/06/01</td>
+                                                <td>115,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ژیلا محمدی</td>
+                                                <td> برنامه نویس</td>
+                                                <td>تهران</td>
+                                                <td>43</td>
+                                                <td>1392/02/01</td>
+                                                <td>75,650</td>
+                                            </tr>
+                                            <tr>
+                                                <td>سارا فروهر</td>
+                                                <td>مسئول فروش</td>
+                                                <td>تهران</td>
+                                                <td>46</td>
+                                                <td>1395/12/06</td>
+                                                <td>145,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td>همایون محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>رشت</td>
+                                                <td>47</td>
+                                                <td>1395/03/21</td>
+                                                <td>356,250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>لاله محمدی</td>
+                                                <td>مدیر سیستم</td>
+                                                <td>رشت</td>
+                                                <td>21</td>
+                                                <td>1396/02/27</td>
+                                                <td>103,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>هدا محمدی</td>
+                                                <td>توسعه دهنده</td>
+                                                <td>گیلان</td>
+                                                <td>30</td>
+                                                <td>1397/07/14</td>
+                                                <td>86,500</td>
+                                            </tr>
+                                            <tr>
+                                                <td> شادی محمدی</td>
+                                                <td>مدیر اجرایی</td>
+                                                <td>تهران</td>
+                                                <td>51</td>
+                                                <td>1394/11/13</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>  یگانه محمدی</td>
+                                                <td>برنامه نویس</td>
+                                                <td>تبریز</td>
+                                                <td>29</td>
+                                                <td>1395/06/27</td>
+                                                <td>183,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>دنیا محمدی</td>
+                                                <td>پشتیبانی مشتری</td>
+                                                <td>تهران</td>
+                                                <td>27</td>
+                                                <td>1395/01/25</td>
+                                                <td>112,000</td>
+                                            </tr>
+                                            </tbody>
+                                    </table>        
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">مثال ردیف کودک</h4>
+                                    <p class="text-muted mb-3">ای پی آی دیتابیس چندین روش برای اتصال دارد
+                                        ردیف های کودک به یک ردیف والدین در دیتا تیبل. می تواند برای نشان دادن اضافی استفاده شود
+                                        اطلاعات مربوط به یک ردیف ، برای مواردی که می خواهید اطلاعات بیشتری را ارائه دهید مفید است
+                                        حدود یک ردیف از جایی که در جدول میزبان وجود دارد.
+                                    </p>
+    
+                                    <table id="child_rows" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>نام</th>
+                                                <th>موقعیت</th>
+                                                <th>دفتر</th>
+                                                <th>حقوق</th>
+                                            </tr>
+                                        </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th></th>
+                                            <th>نام</th>
+                                            <th>موقعیت</th>
+                                            <th>دفتر</th>
+                                            <th>حقوق</th>
+                                        </tr>
+                                    </tbody>
+                                    </table>        
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                </div><!-- container -->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/feather.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/moment.js"></script>
+        <script src="assets/js/locale/fa.min.js"></script>     
+       <script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="plugins/datatables/jszip.min.js"></script>
+        <script src="plugins/datatables/pdfmake.min.js"></script>
+        <script src="plugins/datatables/vfs_fonts.js"></script>
+        <script src="plugins/datatables/buttons.html5.min.js"></script>
+        <script src="plugins/datatables/buttons.print.min.js"></script>
+        <script src="plugins/datatables/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="plugins/datatables/responsive.bootstrap4.min.js"></script>
+        <script src="assets/pages/jquery.datatable.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>
