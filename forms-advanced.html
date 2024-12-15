@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>کنترل ناوگان خودرو و تخلیه نخاله</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="">
+
+        <!-- Plugins css -->
+        <link href="plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/timepicker/bootstrap-material-datetimepicker.css" rel="stylesheet">
+        <link href="plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="vendor/Jcal/daterangepicker.css">
+        <link rel="stylesheet" href="vendor/Jcal/persian-datepicker.css" type="text/css">
+        
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body class="dark-sidenav">
+        <!-- Left Sidenav -->
+        <div class="left-sidenav">
+            <!-- LOGO -->
+            <div class="brand">
+                <a href="crm-index.html" class="logo">
+                    <span>
+                        <img src="assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                    </span>
+                    <span>
+                        <img src="" alt="logo-large" class="logo-lg logo-light">
+                        <img src="" alt="logo-large" class="logo-lg logo-dark">
+                    </span>
+                </a>
+            </div>
+            <!--end logo-->
+            <div class="menu-content h-100" data-simplebar>
+                <ul class="metismenu left-sidenav-menu">
+                    <li class="menu-label mt-0">اصلی</li>
+                    <li>
+                        <a href="javascript: void(0);"> <i data-feather="home" class="align-self-center menu-icon"></i><span>داشبرد</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="ti-control-record"></i>داشبورد اول</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sales-index.html"><i class="ti-control-record"></i>داشبورد دوم</a></li> 
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <a href="javascript: void(0);"><i data-feather="lock" class="align-self-center menu-icon"></i><span>احراز هویت</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="login.html"><i class="ti-control-record"></i>ورود</a></li>
+                            <li class="nav-item"><a class="nav-link" href="register.html"><i class="ti-control-record"></i>ثبت نام</a></li>
+                            <li class="nav-item"><a class="nav-link" href="forget-password.html"><i class="ti-control-record"></i>بازیابی رمزعبور</a></li>
+                            <li class="nav-item"><a class="nav-link" href="404.html"><i class="ti-control-record"></i>خطا 404</a></li>
+                            <li class="nav-item"><a class="nav-link" href="500.html"><i class="ti-control-record"></i>خطا 500</a></li>
+                        </ul>
+                    </li> 
+    
+                    <hr class="hr-dashed hr-menu">
+                    <li class="menu-label my-2">کامپوننت‌ها و دیگر</li>
+    
+                    <li>
+                        <a href="javascript: void(0);"><i data-feather="box" class="align-self-center menu-icon"></i><span>کیت رابط کاربری</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+
+                            <li>
+                                <a href="javascript: void(0);"><i class="ti-control-record"></i>جدول ها<span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li><a href="tables-basic.html">پایه</a></li>
+                                    <li><a href="tables-datatable.html">جدول داده ای</a></li>
+                                </ul>
+                            </li>     
+
+                            <li>
+                                <a href="javascript: void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus align-self-center menu-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg><span>صفحات</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="nav-second-level mm-collapse" aria-expanded="false">
+                                    <li class="nav-item"><a class="nav-link" href="./tables/cars.html"><i class="ti-control-record"></i> لیست وسایل نقلیه</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./tables/device.html"><i class="ti-control-record"></i>لیست دستگاه ها</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./tables/drivers.html"><i class="ti-control-record"></i>لیست رانندگان</a></li>
+                                    
+                                <li class="nav-item"><a class="nav-link" href="./tables/alert.html"><i class="ti-control-record"></i>لیست ثبت اعلان</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./tables/service.html"><i class="ti-control-record"></i>لیست ثبت سرویس </a></li>
+                                <li class="nav-item"><a class="nav-link" href="./tables/simcart.html"><i class="ti-control-record"></i>لیست مانده شارژ سیم کارت</a></li>
+                                </ul>
+                            </li>
+                        </ul>                        
+                    </li>
+         
+                </ul>
+    
+            </div>
+        </div>
+        <!-- end left-sidenav-->
+        
+
+        <div class="page-wrapper">
+            <!-- Top Bar Start -->
+            <div class="topbar">            
+                <!-- Navbar -->
+                <nav class="navbar-custom">    
+                    <ul class="list-unstyled topbar-nav float-right mb-0">  
+                        <li class="dropdown hide-phone">
+                            <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <i data-feather="search" class="topbar-icon"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu dropdown-menu-right dropdown-lg p-0">
+                                <!-- Top Search Bar -->
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ...">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>                      
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <i data-feather="bell" class="align-self-center topbar-icon"></i>
+                                <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
+                            
+                                <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                                    اطلاعیه ها<span class="badge badge-primary badge-pill">2</span>
+                                </h6> 
+                                <div class="notification-menu" data-simplebar>
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">2 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <i data-feather="shopping-cart" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سفارش شما ثبت شد</h6>
+                                                <small class="text-muted mb-0">لورم ایپسوم متن ساختگی با تولید سادگی</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">10 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <img src="assets/images/users/user-4.jpg" alt="" class="thumb-sm rounded-circle">
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">ملاقات با طراحان</h6>
+                                                <small class="text-muted mb-0">نامفهوم از صنعت چاپ و با استفاده از طراحان<mall>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">40 دقیقه قبل</small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">                                                    
+                                                <i data-feather="users" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سه تسک طراحی تجربه کاربری تمام شد</h6>
+                                                <small class="text-muted mb-0">چاپگرها و متون بلکه روزنامه و مجله در ستون</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">1 ساعت قبل </small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <img src="assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle">
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">سفارش شما ثبت شد</h6>
+                                                <small class="text-muted mb-0">نامفهوم از صنعت چاپ و با استفاده از طراحان<mall>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item py-3">
+                                        <small class="float-right text-muted pl-2">2  ساعت قبل </small>
+                                        <div class="media">
+                                            <div class="avatar-md bg-soft-primary">
+                                                <i data-feather="check-circle" class="align-self-center icon-xs"></i>
+                                            </div>
+                                            <div class="media-body align-self-center ml-2 text-truncate">
+                                                <h6 class="my-0 font-weight-normal text-dark">پرداخت موفقیت آمیز</h6>
+                                                <small class="text-muted mb-0">چاپگرها و متون بلکه روزنامه و مجله در ستون</small>
+                                            </div><!--end media-body-->
+                                        </div><!--end media-->
+                                    </a><!--end-item-->
+                                </div>
+                                <!-- All-->
+                                <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                    مشاهده همه <i class="fi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <span class="ml-1 nav-user-name hidden-sm">نیک</span>
+                                <img src="assets/images/users/user-5.jpg" alt="profile-user" class="rounded-circle" />                                 
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user" class="align-self-center icon-xs icon-dual mr-1"></i>پروفایل</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings" class="align-self-center icon-xs icon-dual mr-1"></i>تنظیمات</a>
+                                <div class="dropdown-divider mb-0"></div>
+                                <a class="dropdown-item" href="#"><i data-feather="power" class="align-self-center icon-xs icon-dual mr-1"></i>خروج</a>
+                            </div>
+                        </li>
+                    </ul><!--end topbar-nav-->
+        
+                    <ul class="list-unstyled topbar-nav mb-0">                        
+                        <li>
+                            <button class="nav-link button-menu-mobile">
+                                <i data-feather="menu" class="align-self-center topbar-icon"></i>
+                            </button>
+                        </li> 
+                        <li class="creat-btn">
+                            <div class="nav-link">
+                                <a class=" btn btn-sm btn-soft-primary" href="#" role="button"><i class="fas fa-plus mr-2"></i>کار جدید</a>
+                            </div>                                
+                        </li>                           
+                    </ul>
+                </nav>
+                <!-- end navbar-->
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Page Content-->
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <h4 class="page-title">فرم پیشرفته</h4>
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داستایل</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0);">فرم ها</a></li>
+                                            <li class="breadcrumb-item active">فرم پیشرفته</li>
+                                        </ol>
+                                    </div><!--end col-->
+                                    <div class="col-auto align-self-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
+                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
+                                            <span class="" id="Select_date">11 مرداد</span>
+                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">
+                                            <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        </a>
+                                    </div><!--end col-->  
+                                </div><!--end row-->                                                              
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">سلکت تو کامپوننت‌</h4>
+                                    <p class="text-muted mb-0">سلکت تو جایگزینی مبتنی بر جی کوئری برای جعبه های انتخابی است.
+                                        این پشتیبانی از جستجو ، مجموعه داده های از راه دور و پیمایش نامحدود نتایج را پشتیبانی می کند.
+                                    </p>
+                                </div><!--end card-header-->
+                                <div class="card-body bootstrap-select-1">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="mb-3"> تک انتخاب </label>
+                                            <select class="select2 form-control mb-3 custom-select" style="width: 100%; height:36px;">
+                                                <option>انتخاب</option>
+                                                <optgroup label="منطقه زمانی آلاسکا/هاوایی">
+                                                    <option value="AK"> آلاسکا </option>
+                                                    <option value="HI"> هاوایی </option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی اقیانوس آرام">
+                                                    <option value="CA">کالیفرنیا</option>
+                                                    <option value="NV"> نوادا </option>
+                                                    <option value="OR"> اورگان </option>
+                                                    <option value="WA">واشینگتون</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی کوهستان">
+                                                    <option value="AZ"> آریزونا </option>
+                                                    <option value="CO">کلرادو </option>
+                                                    <option value="ID">ادماهوو</option>
+                                                    <option value="MT">مونتانا</option>
+                                                    <option value="NE">نبراسکا</option>
+                                                    <option value="NM">نیومکزیکو</option>
+                                                    <option value="ND">داکوتای شمالی</option>
+                                                    <option value="UT">یوتا</option>
+                                                    <option value="WY">وایومینگ</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی مرکزی">
+                                                    <option value="AL">آلاباما</option>
+                                                    <option value="AR">آرکانزا</option>
+                                                    <option value="IL">ایلینویز</option>
+                                                    <option value="IA">آیووا</option>
+                                                    <option value="KS">کانزاس</option>
+                                                    <option value="KY">وابسته به کنتاکی</option>
+                                                    <option value="LA">لوئیزیانا</option>
+                                                    <option value="MN">مینه سوتا</option>
+                                                    <option value="MS">میسیسیپی</option>
+                                                    <option value="MO">میسوری</option>
+                                                    <option value="OK">اوکلاهولا</option>
+                                                    <option value="SD">داکوتای جنوبی</option>
+                                                    <option value="TX">تگزاس</option>
+                                                    <option value="TN">تنسی</option>
+                                                    <option value="WI">وابسته به ویسکانسین</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی شرقی">
+                                                    <option value="CT">کانکتیکات</option>
+                                                    <option value="DE">دلاور</option>
+                                                    <option value="FL">فلوریدا</option>
+                                                    <option value="GA">گرجستان</option>
+                                                    <option value="ME">ماین</option>
+                                                    <option value="MD">مریلند</option>
+                                                    <option value="MA">ماساچوست</option>
+                                                    <option value="MI">سرطان جاده</option>
+                                                    <option value="NH">نی هامپشایر</option>
+                                                    <option value="NJ">نیوجرسی</option>
+                                                    <option value="NY">نیویورک</option>
+                                                    <option value="NC">کارولینای شمالی</option>
+                                                    <option value="OH">اوهایو</option>
+                                                    <option value="PA">پنسیلوانیا</option>
+                                                    <option value="RI">جزیره رود آیلند</option>
+                                                    <option value="SC">کارولینای جنوبی</option>
+                                                    <option value="VT">ورمونت</option>
+                                                    <option value="VA">ویرجینیا</option>
+                                                    <option value="WV">ویرجینیای غربی</option>
+                                                </optgroup>
+                                            </select>
+                                        </div><!-- end col -->                                     
+                                        <div class="col-md-6">
+                                            <label class="mb-3">چند انتخاب </label>
+                                            <select class="select2 mb-3 select2-multiple" style="width: 100%" multiple="multiple" data-placeholder="انتخاب کنید">
+                                                <optgroup label="منطقه زمانی آلاسکا/هاوایی">
+                                                    <option value="AK"> آلاسکا </option>
+                                                    <option value="HI"> هاوایی </option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی اقیانوس آرام">
+                                                    <option value="CA">کالیفرنیا</option>
+                                                    <option value="NV"> نوادا </option>
+                                                    <option value="OR"> اورگان </option>
+                                                    <option value="WA">واشینگتون</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی کوهستان">
+                                                    <option value="AZ"> آریزونا </option>
+                                                    <option value="CO">کلرادو </option>
+                                                    <option value="ID">ادماهو</option>
+                                                    <option value="MT">مونتانا</option>
+                                                    <option value="NE">نبراسکا</option>
+                                                    <option value="NM">نیومکزیکو</option>
+                                                    <option value="ND">داکوتای شمالی</option>
+                                                    <option value="UT">یوتا</option>
+                                                    <option value="WY">وایومینگ</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی مرکزی">
+                                                    <option value="AL">آلاباما</option>
+                                                    <option value="AR">آرکانزا</option>
+                                                    <option value="IL">ایلینویز</option>
+                                                    <option value="IA">آیووا</option>
+                                                    <option value="KS">کانزاس</option>
+                                                    <option value="KY">وابسته به کنتاکی</option>
+                                                    <option value="LA">لوئیزیانا</option>
+                                                    <option value="MN">مینه سوتا</option>
+                                                    <option value="MS">میسیسیپی</option>
+                                                    <option value="MO">میسوری</option>
+                                                    <option value="OK">اوکلاهولا</option>
+                                                    <option value="SD">داکوتای جنوبی</option>
+                                                    <option value="TX">تگزاس</option>
+                                                    <option value="TN">تنسی</option>
+                                                    <option value="WI">وابسته به ویسکانسین</option>
+                                                </optgroup>
+                                                <optgroup label="منطقه زمانی شرقی">
+                                                    <option value="CT">کانکتیکات</option>
+                                                    <option value="DE">دلاور</option>
+                                                    <option value="FL">فلوریدا</option>
+                                                    <option value="GA">گرجستان</option>
+                                                    <option value="ME">ماین</option>
+                                                    <option value="MD">مریلند</option>
+                                                    <option value="MA">ماساچوست</option>
+                                                    <option value="MI">سرطان </option>
+                                                    <option value="NH">نی هامپشایر</option>
+                                                    <option value="NJ">نیوجرسی</option>
+                                                    <option value="NY">نیویورک</option>
+                                                    <option value="NC">کارولینای شمالی</option>
+                                                    <option value="OH">اوهایو</option>
+                                                    <option value="PA">پنسیلوانیا</option>
+                                                    <option value="RI">جزیره رود آیلند</option>
+                                                    <option value="SC">کارولینای جنوبی</option>
+                                                    <option value="VT">ورمونت</option>
+                                                    <option value="VA">ویرجینیا</option>
+                                                    <option value="WV">ویرجینیای غربی</option>
+                                                </optgroup>
+                                            </select> 
+                                        </div> <!-- end col -->                                                
+                                    </div><!-- end row --> 
+                                </div><!-- end card-body --> 
+                            </div> <!-- end card -->                               
+                        </div> <!-- end col -->
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">انتخاب کننده رنگ بوت استرپ</h4>
+                                    <p class="text-muted mb-0">نمونه ساده ، با هر گزینه یا اطلاعات رنگی.</p>
+                                </div><!--end card-header-->
+                                <div class="card-body bootstrap-select-1">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="mb-3">حالت ساده</label> 
+                                            <div id="b_color-default" class="input-group" title="Using input value">
+                                                <input type="text" class="form-control input-lg" value="#f5a416"/>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                                </span>
+                                            </div>
+                                        </div>  <!-- end row -->                                  
+                                        <div class="col-md-4">
+                                            <label class="mb-3">حالت آر جی بی</label>                                            
+                                            <div id="b_color_rgb" class="input-group" data-color="rgb(21, 178, 236)"
+                                                    title="Using data-color attribute in the colorpicker element">
+                                                <input type="text" class="form-control input-lg"/>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                                </span>
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="col-md-4">
+                                            <label class="mb-3">حالت اچ اس اال</label>                                           
+                                            <div id="b_color_hsl" class="input-group" title="Using data-color attribute in the input">
+                                                <input type="text" class="form-control input-lg" data-color="hsl(150, 86%, 48%)"/>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                                </span>
+                                            </div>
+                                        </div><!-- end row -->
+                                    </div><!-- end row -->
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card -->                               
+                        </div> <!-- end col -->
+                    </div> <!-- end row --> 
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">بوت استرپ انتخابگر تاریخ متریال</h4>
+                                    <p class="text-muted mb-0">یک مثال از بوت استرپ انتخابگر تاریخ متریال</p> 
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="form-material">
+                                        <label class="mb-3">پیش فرض متریال تاریخ انتخاب کننده</label>
+                                        <input type="text" class="form-control" placeholder="1399-06-04" id="mdate">
+                                        
+                                        <label class="my-3">پیش فرض متریال انتخابگر زمان و تاریخ</label>
+                                        <input type="text" id="date-format" class="form-control" placeholder="شنبه 24 دی 1399 - 21:44">
+
+                                        <label class="my-3">زمان انتخاب</label>
+                                        <input class="form-control" id="timepicker" placeholder="زمان بررسی">
+                                        
+                                        <label class="my-3">تعیین تاریخ حداقل</label>
+                                        <input type="text" class="form-control" placeholder="تعیین تاریخ حداقل" id="min-date">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="my-3">تاریخ شروع</label>
+                                                <input type="text" class="form-control" placeholder="تاریخ شروع" id="date-start">
+                                            </div><!--end col-->
+                                            <div class="col-md-6">
+                                                <label class="my-3"> تاریخ پایان </label>
+                                                <input type="text" class="form-control" placeholder="تاریخ پایان" id="date-end">
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div>       
+                                </div><!--end card-body-->
+                            </div><!--end card-->                                
+                        </div> <!-- end col -->
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">انتخاب محدوده تاریخ</h4>
+                                    <p class="text-muted mb-0">یک کامپوننت جاوا اسکریپت برای انتخاب محدوده تاریخ ، تاریخ و زمان.</p> 
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <label class="mb-3">مثال پایه</label>                             
+                                    <div class="input-group">                                            
+                                        <input type="text" class="form-control" name="dates">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <label class="my-3">انتخاب کننده محدوده تاریخ ساده با پاسخ به کالبک</label>
+                                    <div class="input-group">                                            
+                                        <input type="text" class="form-control" name="daterange">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <label class="my-3">انتخاب محدوده تاریخ با زمان</label>
+                                    <div class="input-group">                                            
+                                        <input type="text" class="form-control" name="datetimes">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <label class="my-3">انتخاب کننده تاریخ</label>
+                                    <div class="input-group">                                            
+                                        <input type="text" class="form-control" name="birthday" value="10/24/1984">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <label class="my-3">محدوده تاریخ از پیش تعریف شده</label>
+                                    <div class="input-group">  
+                                        <input type="text"  id="reportrange" class="form-control" value="10/24/1984">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="dripicons-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->  
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">حداکثر طول بوت استرپ</h4>
+                                    <p class="text-muted mb-0">این افزونه به طور پیش فرض با ادغام می شود
+                                        بوت استرپ توییتر با استفاده از نشان ها برای نمایش حداکثر لنگه
+                                        فیلدی که کاربر در حال درج متن است.
+                                    </p>
+                                </div><!--end card-header-->
+                                <div class="card-body"> 
+                                    <label class="mb-2">استفاده پیش فرض</label>
+                                    <p class="text-muted mb-3 font-13">
+                                      این نشان به طور پیش فرض هنگامی ظاهر می شود که کاراکترهای باقیمانده 10 یا کمتر باشند:
+                                    </p>
+
+                                    <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" />            
+                                    <div class="mt-3">
+                                        <label class="mb-2">مقدار آستانه</label>
+                                        <p class="text-muted mb-3 font-13">
+                                           آیا می خواهید این نشان در هنگام 20 کاراکتر یا کمتر نشان داده شود؟از <code> threshold </code> گزینه:
+                                        </p>
+                                        <input type="text" maxlength="25" name="thresholdconfig" class="form-control" id="thresholdconfig" />
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label class="mb-2">موقعیت</label>
+                                        <p class="text-muted  mb-3 font-13">
+                                         تمام کاری که شما باید انجام دهید مشخص کردن <code>placement</code> گزینه ، با یکی از آن رشته ها.اگر هیچ کس
+                                            مشخص شده است ، موقعیت یابی به "پایین" می رسد.
+                                        </p>
+                                        <input type="text" class="form-control" maxlength="25" name="placement" id="placement" />
+                                    </div>                                    
+                                    <div class="mt-3">
+                                        <label class="mb-2">همه گزینه ها</label>
+                                        <p class="text-muted  mb-3 font-13">
+                                            لطفا توجه داشته باشید: اگر <code>alwaysShow</code> گزینه فعال است ، <code>threshold</code> گزینه نادیده گرفته می شود.
+                                        </p>
+                                        <input type="text" class="form-control" maxlength="25" name="alloptions" id="alloptions" />
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <label class="mb-2">تکست آریا</label>
+                                        <p class="text-muted  mb-3 font-13">
+                                            بوت استرپ ماکزیمم طول از تکست آریا و همچنین ورودی ها پشتیبانی می کند. حتی در IE قدیمی.
+                                        </p>
+                                        <textarea id="textarea" class="form-control" maxlength="225" rows="3" placeholder="این متن محدودیت 225 کاراکتر دارد. "></textarea>
+                                    </div>                                    
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card -->                                       
+                        </div> <!-- end col -->
+
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">تاچ بوت استرپ</h4>
+                                    <p class="text-muted  mb-0">یک مؤلفه اسپینر ورودی موبایل و لمسی برای بوت استرپ</p>
+                                </div><!--end card-header-->
+                                <div class="card-body">                                               
+                                    <form>
+                                        <div class="form-group">
+                                            <label class="mb-3">استفاده از ویژگی های داده</label>
+                                            <input id="demo0" type="text" value="55" name="demo0" data-bts-min="0" data-bts-max="100" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-3">با مقدار خالی شروع کنید:</label>
+                                            <input id="demo3" type="text" value="" name="demo3">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-3">مثال با پسوند (بزرگ)</label>
+                                            <input id="demo1" type="text" value="55" name="demo1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-3">ویژگی مقدار تنظیم نشده است (اعمال تنظیمات)</label>
+                                            <input id="demo3_21" type="text" value="" name="demo3_21">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <label class="mb-3">با پیشوند </label>
+                                            <input id="demo2" type="text" value="0" name="demo2" class=" form-control">
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <label class="mb-3">مقدار به صراحت روی 33 تنظیم شده است (تنظیمات پرش) </label>
+                                            <input id="demo3_22" type="text" value="33" name="demo3_22">
+                                        </div>  
+                                    </form>
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card -->
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                </div><!-- container -->
+
+                <footer class="footer text-center text-sm-left">
+                    &copy; 1401 داستایل<span class="d-none d-sm-inline-block float-right">ارائه با <i class="mdi mdi-heart text-danger"></i> 
+ آفرید تیم </span>
+                </footer><!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/feather.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+
+
+        <script src="assets/js/moment.js"></script>
+<script src="assets/js/locale/fa.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <script src="plugins/Jcal/bootstrap-datepicker.fa.min.js"></script>
+
+
+        <script src="assets/js/moment.js"></script>
+        <script src="assets/plugins/Jcal/moment-jalaali.js"></script>
+       
+
+       
+        <!-- Plugins js -->
+        
+        <script src="plugins/select2/select2.min.js"></script>
+        <script src="plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+        <script src="plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+        <script src="plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+        
+        <script src="assets/pages/jquery.forms-advanced.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>
