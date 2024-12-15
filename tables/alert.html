@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>کنترل ناوگان خودرو و تخلیه نخاله</title>
+        <title>مدیریت اعلانات</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta content="" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -236,29 +236,51 @@
                 <div class="container-fluid">
                     <!-- Page-Title -->
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-title-box">
-                                <div class="row">
-                                    <div class="col">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داشبورد ناوگان خودرو</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">ثبت اعلان</a></li>
-                                            <!-- <li class="breadcrumb-item active"></li> -->
-                                        </ol>
-                                    </div><!--end col-->
-                                    <div class="col-auto align-self-center">
-                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
-                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
-                                            <span class="" id="Select_date">11 مرداد</span>
-                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary mx-2">
-                                            <i data-feather="download" class="align-self-center icon-xs"></i>
-                                        </a>
-                                    </div><!--end col-->  
-                                </div><!--end row-->                                                              
-                            </div><!--end page-title-box-->
-                        </div><!--end col-->
+                        <!--collapse-->
+                        <a class="btn btn-info btn-sm my-3" data-toggle="collapse" href="#collapseExample">ثبت اعلان جدید</a>
+                        <div class="collapse col-md-12" id="collapseExample">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">نام اعلان</label>
+                                                    <input type="email" class="form-control" id="" placeholder="نام اعلان">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">نوع</label>
+                                                    <select class="form-control">
+                                                        <option>نوع 1</option>
+                                                        <option>نوع 2</option>
+                                                        <option>نوع 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-md-12 col-12">                            
+                                                <div class="form-group">
+                                                    <label for="message">متن اعلان</label>
+                                                    <textarea class="form-control" rows="5" id="message"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 mb-2">
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                    <label class="custom-control-label" for="customSwitch1">وضعیت</label>
+                                                </div> 
+                                            </div>
+                                           
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">ذخیره</button>
+                                    </form>                                  
+                                </div><!--end card-body-->
+                            </div>
+                          </div>
+                        <!--end collapse-->
                     </div><!--end row-->
                     <!-- end page title end breadcrumb -->
    
@@ -267,17 +289,33 @@
     
                     <div class="row mt-3">
                         <div class="col-lg-12">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="alert-create.html" class="btn btn-info btn-sm my-3">ثبت اعلان جدید</a>
-                                <div class="form-group">
-                                    <label for="example-search-input">جستجو : </label>
-                                    <input class="form-control" type="search" placeholder="جستجو" id="example-search-input">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <!-- <a href="alert-create.html" class="btn btn-info btn-sm my-3">ثبت اعلان جدید</a> -->
+                                   <div class="col-auto align-self-center">
+                                    <a href="#" class="btn btn-sm btn-outline-success">
+                                        <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        Excel
+                                    </a>
+                                </div><!--end col--> 
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ..." style="height: 35px!important;">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
                                 </div>
                             </div>
                             
                             <div class="card">
                                 <div class="card-header d-flex align-items-center justify-content-between">
-                                    <h4 class="card-title">لیست اعلان ها</h4>
+                                    <div class="btn-group d-flex flex-column">
+                                        <label class="text-dark mb-1">نمایش بر اساس : </label>
+                                        <select class="form-control form-control-sm">
+                                            <option value="">10</option>
+                                            <option value="">25</option>
+                                            <option value="">50</option>
+                                            <option value="">100</option>
+                                        </select>
+                                    </div>
                                     <div class="btn-group d-flex flex-column">
                                         <small class="text-dark mb-1">فیلتر بر اساس : </small>
                                         <div>

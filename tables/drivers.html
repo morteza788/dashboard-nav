@@ -10,7 +10,8 @@
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="">
-
+        
+        <link href="../plugins/dropify/css/dropify.min.css" rel="stylesheet">
         <!-- App css -->
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/css/jquery-ui.min.css" rel="stylesheet">
@@ -236,29 +237,82 @@
                 <div class="container-fluid">
                     <!-- Page-Title -->
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-title-box">
-                                <div class="row">
-                                    <div class="col">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داشبورد ناوگان خودرو</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">مدیریت رانندگان</a></li>
-                                            <!-- <li class="breadcrumb-item active"></li> -->
-                                        </ol>
-                                    </div><!--end col-->
-                                    <div class="col-auto align-self-center">
-                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
-                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
-                                            <span class="" id="Select_date">11 مرداد</span>
-                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary mx-2">
-                                            <i data-feather="download" class="align-self-center icon-xs"></i>
-                                        </a>
-                                    </div><!--end col-->  
-                                </div><!--end row-->                                                              
-                            </div><!--end page-title-box-->
-                        </div><!--end col-->
+                        <!--collapse-->
+                        <a class="btn btn-info btn-sm my-3" data-toggle="collapse" href="#collapseExample">ثبت دستگاه جدید</a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">نام راننده</label>
+                                                    <input type="email" class="form-control" id="" placeholder="نام وسیله نقلیه">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">شماره همراه</label>
+                                                    <input type="number" class="form-control" id="" placeholder=" شماره پلاک">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">کد ملی</label>
+                                                    <input type="number" class="form-control" id="" placeholder=" شماره پلاک">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">شماره گواهینامه</label>
+                                                    <input type="text" class="form-control" id="" placeholder="سیم کارت">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">تاریخ تولد</label>
+                                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">نوع گواهینامه</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>نوع 1</option>
+                                                        <option>نوع 2</option>
+                                                        <option>نوع 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                       
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">جنسیت</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>مرد</option>
+                                                        <option>زن</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                 
+                                            <div class="col-xl-12 col-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        آپلود تصویر
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="dropify-wrapper" style="height: 514px;"><div class="dropify-message"><span class="file-icon"> <p>یک فایل را اینجا بکشید یا کلیک کنید یا کلیک کنید</p></span><p class="dropify-error">اوه ، چیزی اشتباه ضمیمه شده است.</p></div><div class="dropify-loader" style="display: none;"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" id="input-file-now-custom-2" class="dropify" data-height="500"><button type="button" class="dropify-clear">برداشتن</button><div class="dropify-preview" style="display: none;"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="file-icon"></span> <span class="dropify-filename-inner">avatar04.png</span></p><p class="dropify-infos-message">برای جایگزینی بکشید و رها کنید یا کلیک کنید</p></div></div></div></div>
+                                                    </div>
+                                                </div><!--end card-->
+                                            </div>
+                                
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">ارسال</button>
+                                    </form>                                             
+                                </div><!--end card-body-->
+                            </div>
+                          </div>
+                        <!--end collapse-->
                     </div><!--end row-->
                     <!-- end page title end breadcrumb -->
    
@@ -267,17 +321,32 @@
     
                     <div class="row mt-3">
                         <div class="col-lg-12">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="drivers-create.html" class="btn btn-info btn-sm my-3">ثبت راننده جدید</a>
-                                <div class="form-group">
-                                    <label for="example-search-input">جستجو : </label>
-                                    <input class="form-control" type="search" placeholder="جستجو" id="example-search-input">
-                                    
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <!-- <a href="drivers-create.html" class="btn btn-info btn-sm my-3">ثبت راننده جدید</a> -->
+                                <div class="col-auto align-self-center">
+                                    <a href="#" class="btn btn-sm btn-outline-success">
+                                        <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        Excel
+                                    </a>
+                                </div><!--end col--> 
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ..." style="height: 35px!important;">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header d-flex align-items-center justify-content-between">
-                                    <h4 class="card-title">لیست رانندگان</h4>
+                                    <div class="btn-group d-flex flex-column">
+                                        <label class="text-dark mb-1">نمایش بر اساس : </label>
+                                        <select class="form-control form-control-sm">
+                                            <option value="">10</option>
+                                            <option value="">25</option>
+                                            <option value="">50</option>
+                                            <option value="">100</option>
+                                        </select>
+                                    </div>
                                     <div class="btn-group d-flex flex-column">
                                         <small class="text-dark mb-1">فیلتر بر اساس : </small>
                                         <div>
@@ -315,37 +384,7 @@
                                                 <th>860000000</th>
                                                 <th>مرد</th>
                                                 <td class="text-right">                                                       
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>هارون پولین</th>
-                                                <th><img src="../assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-xs mr-1"></th>
-                                                <th>09121111111</th>
-                                                <th>0890137412</th>
-                                                <th>19 آبان 1403</th>
-                                                <th>نوع 1</th>
-                                                <th>860000000</th>
-                                                <th>مرد</th>
-                                                <td class="text-right">                                                       
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>هارون پولین</th>
-                                                <th><img src="../assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-xs mr-1"></th>
-                                                <th>09121111111</th>
-                                                <th>0890137412</th>
-                                                <th>19 آبان 1403</th>
-                                                <th>نوع 1</th>
-                                                <th>860000000</th>
-                                                <th>مرد</th>
-                                                <td class="text-right">                                                       
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
+                                                    <a href="#"><i class="far fa-edit text-info font-18"></i></a>
                                                     <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
                                                 </td>
                                             </tr>
@@ -380,7 +419,9 @@
         <script src="../assets/js/moment.js"></script>
         <script src="../assets/js/locale/fa.min.js"></script>     
         <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-
+        <script src="../assets/pages/jquery.form-upload.init.js"></script>
+        <script src="../plugins/dropify/js/dropify.min.js"></script>
+        <script src="../assets/pages/jquery.form-upload.init.js"></script>
         <!-- App js -->
         <script src="../assets/js/app.js"></script>
         

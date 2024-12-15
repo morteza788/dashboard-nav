@@ -236,29 +236,65 @@
                 <div class="container-fluid">
                     <!-- Page-Title -->
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-title-box">
-                                <div class="row">
-                                    <div class="col">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داشبورد ناوگان خودرو</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">مدیریت دستگاه ها</a></li>
-                                            <!-- <li class="breadcrumb-item active"></li> -->
-                                        </ol>
-                                    </div><!--end col-->
-                                    <div class="col-auto align-self-center">
-                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
-                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
-                                            <span class="" id="Select_date">11 مرداد</span>
-                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary mx-2">
-                                            <i data-feather="download" class="align-self-center icon-xs"></i>
-                                        </a>
-                                    </div><!--end col-->  
-                                </div><!--end row-->                                                              
-                            </div><!--end page-title-box-->
-                        </div><!--end col-->
+                        <!--collapse-->
+                        <a class="btn btn-info btn-sm my-3" data-toggle="collapse" href="#collapseExample">ثبت دستگاه جدید</a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">نام دستگاه</label>
+                                                    <input type="email" class="form-control" id="" placeholder="نام دستگاه">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for=""> شناسه imei</label>
+                                                    <input type="number" class="form-control" id="" placeholder="شناسه imei">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">اشتراک</label>
+                                                    <input type="number" class="form-control" id="" placeholder="اشتراک">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">سیم کارت</label>
+                                                    <input type="text" class="form-control" id="" placeholder="سیم کارت">
+                                                </div>
+                                            </div>
+              
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for=""> نوع دستگاه </label>
+                                                    <select class="form-control mb-4">
+                                                        <option>نوع 1</option>
+                                                        <option>نوع 2</option>
+                                                        <option>نوع 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                       
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">درگاه</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>sms</option>
+                                                        <option>gprs</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">ذخیره</button>
+                                    </form>                                             
+                                </div><!--end card-body-->
+                            </div>
+                          </div>
+                        <!--end collapse-->
                     </div><!--end row-->
                     <!-- end page title end breadcrumb -->
    
@@ -267,21 +303,35 @@
     
                     <div class="row mt-3">
                         <div class="col-lg-12">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="device-create.html" class="btn btn-info btn-sm my-3">ثبت دستگاه جدید</a>
-                                <div class="form-group">
-                                    <label for="example-search-input">جستجو : </label>
-                                    <input class="form-control" type="search" placeholder="جستجو" id="example-search-input">
-                                    
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <!-- <a href="device-create.html" class="btn btn-info btn-sm my-3">ثبت دستگاه جدید</a> -->
+                                <div class="col-auto align-self-center">
+                                    <a href="#" class="btn btn-sm btn-outline-success">
+                                        <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        Excel
+                                    </a>
+                                </div><!--end col--> 
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ..." style="height: 35px!important;">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header d-flex align-items-center justify-content-between">
-                                    <h4 class="card-title">لیست دستگاه ها</h4>
+                                    <div class="btn-group d-flex flex-column">
+                                        <label class="text-dark mb-1">نمایش بر اساس : </label>
+                                        <select class="form-control form-control-sm">
+                                            <option value="">10</option>
+                                            <option value="">25</option>
+                                            <option value="">50</option>
+                                            <option value="">100</option>
+                                        </select>
+                                    </div>
                                     <div class="btn-group d-flex flex-column">
                                         <small class="text-dark mb-1">فیلتر بر اساس : </small>
                                         <div>
-                                            <a href="#" id="btPause" class="btn btn-outline-primary btn-sm">نوع دستگاه</a>
                                             <a href="#" id="btResume" class="btn btn-outline-primary btn-sm">وضعیت</a>
                                             <a href="#" id="btResume" class="btn btn-outline-primary btn-sm">اشتراک</a>
                                             <a href="#" id="btResume" class="btn btn-outline-primary btn-sm">نوع درگاه</a>
@@ -295,6 +345,7 @@
                                             <tr>
                                                 <th>ردیف</th>
                                                 <th>نام دستگاه</th>
+                                                <th>شرکت</th>
                                                 <th>شناسه imei</th>
                                                 <th>اشتراک</th>
                                                 <th>سیم کارت</th>
@@ -308,6 +359,7 @@
                                             <tr>
                                                 <th>1</th>
                                                 <th>دستگاه یک</th>
+                                                <th>شرکت</th>
                                                 <th>425454</th>
                                                 <th>اشتراک 1</th>
                                                 <th>09121111111</th>
@@ -316,7 +368,7 @@
                                                 <th><span class="badge badge-outline-success">تایید شده</span></th>
                                                 <td class="text-right">                                                       
                                                     <a href="#"><i class="far fa-edit text-info font-18"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18 mx-2"></i></a>
+                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
                                                     <a href="#"><i class="far fa-share-square text-success font-18"></i></a>
                                                 </td>
                                             </tr>

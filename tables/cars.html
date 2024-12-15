@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>کنترل ناوگان خودرو و تخلیه نخاله</title>
+        <title>مدیریت وسایل نقلیه</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta content="" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -236,29 +236,105 @@
                 <div class="container-fluid">
                     <!-- Page-Title -->
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-title-box">
-                                <div class="row">
-                                    <div class="col">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">داشبورد ناوگان خودرو</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript:void(0);">وسایل نقلیه</a></li>
-                                            <!-- <li class="breadcrumb-item active"></li> -->
-                                        </ol>
-                                    </div><!--end col-->
-                                    <div class="col-auto align-self-center">
-                                        <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">
-                                            <span class="day-name" id="Day_Name">امروز:</span>&nbsp;
-                                            <span class="" id="Select_date">11 مرداد</span>
-                                            <i data-feather="calendar" class="align-self-center icon-xs ml-1"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary mx-2">
-                                            <i data-feather="download" class="align-self-center icon-xs"></i>
-                                        </a>
-                                    </div><!--end col-->  
-                                </div><!--end row-->                                                              
-                            </div><!--end page-title-box-->
-                        </div><!--end col-->
+                        <!--collapse-->
+                        <a class="btn btn-info btn-sm my-3" data-toggle="collapse" href="#collapseExample">ثبت وسیله نقلیه جدید</a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">انتخاب شرکت</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>شرکت</option>
+                                                        <option>شرکت</option>
+                                                        <option>شرکت</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">نوع وسیله نقلیه</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>نوع 1</option>
+                                                        <option>نوع 2</option>
+                                                        <option>نوع 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">نام وسیله نقلیه</label>
+                                                    <input type="email" class="form-control" id="" placeholder="نام وسیله نقلیه">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">شماره پلاک</label>
+                                                    <input type="number" class="form-control" id="" placeholder=" شماره پلاک">
+                                                </div>
+                                            </div>
+                                     
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">انتخاب راننده</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>راننده</option>
+                                                        <option>راننده</option>
+                                                        <option>راننده</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">انتخاب دستگاه</label>
+                                                    <select class="form-control mb-4">
+                                                        <option>دستگاه</option>
+                                                        <option>دستگاه</option>
+                                                        <option>دستگاه</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                          
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">سیم کارت</label>
+                                                    <input type="number" class="form-control" id="" placeholder="سیم کارت">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="">کیلومتر نصب</label>
+                                                    <input type="number" class="form-control" id="" placeholder="کیلومتر نصب ">
+                                                </div>
+                                            </div>
+                                  
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">مصرف سوخت درجا</label>
+                                                    <input type="text" class="form-control" id="" placeholder="مصرف سوخت درجا">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">مصرف سوخت درحال حرکت</label>
+                                                    <input type="text" class="form-control" id="" placeholder="مصرف سوخت در حال حرکت">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-12">
+                                                <div class="form-group">
+                                                    <label for="">شماره vin</label>
+                                                    <input type="text" class="form-control" id="" placeholder="شماره vin">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">ذخیره</button>
+                                    </form>                                           
+                                </div><!--end card-body-->
+                            </div>
+                          </div>
+                        <!--end collapse-->
                     </div><!--end row-->
                     <!-- end page title end breadcrumb -->
    
@@ -267,17 +343,36 @@
     
                     <div class="row mt-3">
                         <div class="col-lg-12">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="cars-create.html" class="btn btn-info btn-sm my-3">ثبت وسیله نقلیه جدید</a>
-                                <div class="form-group">
-                                    <label for="example-search-input">جستجو : </label>
-                                    <input class="form-control" type="search" placeholder="جستجو" id="example-search-input">
+                            <div class="d-flex align-items-center justify-content-between my-2">
+                                <!-- <a href="cars-create.html" class="btn btn-info btn-sm my-3">ثبت وسیله نقلیه جدید</a> -->
+                                <!-- <a href="#"><i class="far fa-file-excel text-success font-18 mx-2"></i></a> -->
+                                <div class="col-auto align-self-center">
+                                    <a href="#" class="btn btn-sm btn-outline-success">
+                                        <i data-feather="download" class="align-self-center icon-xs"></i>
+                                        Excel
+                                    </a>
+                                </div><!--end col--> 
+                                <div class="app-search-topbar">
+                                    <form action="#" method="get">
+                                        <input type="search" name="search" class="from-control top-search mb-0" placeholder="جستجو ..." style="height: 35px!important;">
+                                        <button type="submit"><i class="ti-search"></i></button>
+                                    </form>
                                 </div>
+                                
+                            
                             </div>
                             
                             <div class="card">
                                 <div class="card-header d-flex align-items-center justify-content-between">
-                                    <h4 class="card-title">لیست وسایل نقلیه</h4>
+                                    <div class="btn-group d-flex flex-column">
+                                        <label class="text-dark mb-1">نمایش بر اساس : </label>
+                                        <select class="form-control form-control-sm">
+                                            <option value="">10</option>
+                                            <option value="">25</option>
+                                            <option value="">50</option>
+                                            <option value="">100</option>
+                                        </select>
+                                    </div>
                                     <div class="btn-group d-flex flex-column">
                                         <small class="text-dark mb-1">فیلتر بر اساس : </small>
                                         <div>
@@ -295,10 +390,11 @@
                                                 <th>نام وسیله نقلیه</th>
                                                 <th>نام شرکت</th>
                                                 <th>نام راننده</th>
-                                                <th>نام دستگاه</th>
-                                                <th>سیم کارت</th>
+                                                <th>نوع خودرو</th>
+                                                <th>استعلام خلافی</th>
                                                 <th>MIEI کد</th>
                                                 <th>تاریخ اعتبار</th>
+                                                <th>وضعیت اشتراک</th>
                                                 <th>شماره پلاک</th>
                                                 <th class="text-right">عملیات</th>
                                             </tr>
@@ -309,78 +405,14 @@
                                                 <th>سمند</th>
                                                 <th>شرکت 1</th>
                                                 <th>هارون پولین</th>
-                                                <th>دستگاه 1</th>
-                                                <th>09121111111</th>
+                                                <th>نوع 1</th>
+                                                <th>خلافی</th>
                                                 <th>860000000</th>
                                                 <th>25 آذر 1400</th>
+                                                <td>اشتراک 1</td>
                                                 <td> <span>ایران</span> 32 <span class="text-muted ">|</span> 315 <span>ق</span> 91</td>
                                                 <td class="text-right">                                                       
-                                                    <!-- <a href="#"><i class="far fa-user text-success font-18"></i></a> -->
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>2</th>
-                                                <th>سمند</th>
-                                                <th>شرکت 1</th>
-                                                <th>هارون پولین</th>
-                                                <th>دستگاه 1</th>
-                                                <th>09121111111</th>
-                                                <th>860000000</th>
-                                                <th>25 آذر 1400</th>
-                                                <td> <span>ایران</span> 32 <span class="text-muted ">|</span> 315 <span>ق</span> 91</td>
-                                                <td class="text-right">                                                       
-                                                    <!-- <a href="#"><i class="far fa-user text-success font-18"></i></a> -->
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>3</th>
-                                                <th>سمند</th>
-                                                <th>شرکت 1</th>
-                                                <th>هارون پولین</th>
-                                                <th>دستگاه 1</th>
-                                                <th>09121111111</th>
-                                                <th>860000000</th>
-                                                <th>25 آذر 1400</th>
-                                                <td> <span>ایران</span> 32 <span class="text-muted ">|</span> 315 <span>ق</span> 91</td>
-                                                <td class="text-right">                                                       
-                                                    <!-- <a href="#"><i class="far fa-user text-success font-18"></i></a> -->
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>4</th>
-                                                <th>سمند</th>
-                                                <th>شرکت 1</th>
-                                                <th>هارون پولین</th>
-                                                <th>دستگاه 1</th>
-                                                <th>09121111111</th>
-                                                <th>860000000</th>
-                                                <th>25 آذر 1400</th>
-                                                <td> <span>ایران</span> 32 <span class="text-muted ">|</span> 315 <span>ق</span> 91</td>
-                                                <td class="text-right">                                                       
-                                                    <!-- <a href="#"><i class="far fa-user text-success font-18"></i></a> -->
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
-                                                    <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>5</th>
-                                                <th>سمند</th>
-                                                <th>شرکت 1</th>
-                                                <th>هارون پولین</th>
-                                                <th>دستگاه 1</th>
-                                                <th>09121111111</th>
-                                                <th>860000000</th>
-                                                <th>25 آذر 1400</th>
-                                                <td> <span>ایران</span> 32 <span class="text-muted ">|</span> 315 <span>ق</span> 91</td>
-                                                <td class="text-right">                                                       
-                                                    <!-- <a href="#"><i class="far fa-user text-success font-18"></i></a> -->
-                                                    <a href="#"><i class="far fa-edit text-info font-18 mx-2"></i></a>
+                                                    <a href="#"><i class="far fa-edit text-info font-18"></i></a>
                                                     <a href="#"><i class="far fa-trash-alt text-danger font-18"></i></a>
                                                 </td>
                                             </tr>
